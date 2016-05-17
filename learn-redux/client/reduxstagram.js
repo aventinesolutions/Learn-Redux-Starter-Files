@@ -1,6 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+// import styles
 import css from './styles/style.styl';
 
-render(<p>hello world</p>, document.getElementById('root'));
+// import components
+import Main from './components/main';
+
+render(<Main/>, document.getElementById('root'));
