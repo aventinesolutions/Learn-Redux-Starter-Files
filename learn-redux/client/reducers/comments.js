@@ -7,10 +7,16 @@ function postComments(state = [], action) {
         text: action.comment
       }];
     case 'REMOVE_COMMENT':
-      return state;
+      // we need to return the new state without the deleted comment
+      // from the start to the one we want to delete
+      let slice1 = state.slice(0, action.i);
+      // after the deleted one, to the end
+      let slice2 = state.slice(action.i + 1);
+      return [...slice1, ...slice2];
     default:
       return state;
   }
+  return state;
 }
 
 function comments(state = [], action) {
