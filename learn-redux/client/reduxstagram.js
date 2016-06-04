@@ -24,9 +24,6 @@ Raven.config(sentry_url, {
   }
 }).install();
 
-Raven.captureMessage('ReelMetrics disappoints me!');
-Raven.showReportDialog();
-
 const router = (
   <Provider store={store}>
     <Router history={history}>
